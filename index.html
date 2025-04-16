@@ -284,8 +284,8 @@ h1:before {
                $('#tgl').mask('00/00/0000');
                
                 $('').mask('0000');
-                $( '#nokar' ).mask('000.000.000.000.000', {reverse: true});
- var dengan_rupiah = document.getElementById('saldo');
+                $( '.uang' ).mask('000.000.000.000.000', {reverse: true});
+ var dengan_rupiah = document.getElementById('#nokar');
     dengan_rupiah.addEventListener('keyup', function(e)
     {
         dengan_rupiah.value = formatRupiah(this.value, 'Rp. ');
